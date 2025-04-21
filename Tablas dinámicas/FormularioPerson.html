@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Registro de Personas</title>
+    <link rel="stylesheet" href="estilosPerson.css" />
+</head>
+<body>
+    <div class="form-container">
+        <form id="formulario">
+            <h2>Registro</h2>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="M">Masculino</option>
+                <option value="H">Femenino</option>
+                <option value="O">Otro</option>
+            </select>
+
+            <label for="fh_nac">Fecha de nacimiento:</label>
+            <input type="date" id="fh_nac" name="fh_nac" required>
+
+            <label for="id_rol">Rol:</label>
+            <select id="id_rol" name="id_rol" required>
+                <option value="1">Alumno</option>
+                <option value="2">Profesor</option>
+                <option value="3">Directivo</option>
+                <option value="4">Administrativo</option>
+            </select>
+
+            <div class="button-group">
+                <input type="submit" value="Guardar">
+                <button type="button" onclick="document.getElementById('formulario').reset();">Cancelar</button>
+            </div>
+        </form>
+       <br></br>
+        <h2>Alumnos registrados</h2>
+        <div class="tabla-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Sexo</th>
+                        <th>Fecha Nac.</th>
+                        <th>Rol</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="tabla.js"></script>
+</body>
+</html>
+
+

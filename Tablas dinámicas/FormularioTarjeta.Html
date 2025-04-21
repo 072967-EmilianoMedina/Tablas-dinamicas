@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="estilosForm.css" />
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="titulo-principal">Formulario de Pago</h1>
+        <div class="form-container">
+            <form id="formulario">
+                <label for="numerotarjeta"><strong>Número de tarjeta:</strong></label>
+                <input type="text" id="numerotarjeta" name="numerotarjeta" required />
+
+                <label for="FechaVen"><strong>Fecha de vencimiento</strong></label>
+                <input type="date" id="FechaVen" name="FechaVen" required />
+
+                <div class="radio-group">
+                    <label><strong>Método de pago:</strong></label>
+                    <input type="radio" id="visa" name="Grupo1" value="Visa" required />Visa
+                    <input type="radio" id="mastercard" name="Grupo1" value="MasterCard" />MasterCard
+                </div>
+
+                <label for="Nombre"><strong>Nombre del titular:</strong></label>
+                <input type="text" id="Nombre" name="Nombre" required />
+
+                <label for="CVC"><strong>CVC:</strong></label>
+                <input type="number" id="CVC" name="CVC" required />
+
+                <label for="Contrasena"><strong>Contraseña:</strong></label>
+                <input type="password" id="Contrasena" name="Contrasena" required />
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="check" name="check" required />
+                    Los datos ingresados son correctos
+                </div>
+
+                <label for="selector"><strong>Talla:</strong></label>
+                <select name="selector" id="selector">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <label for="textocomen"><strong>Comentarios:</strong></label>
+                <textarea name="textocomen" id="textocomen"></textarea>
+
+                <div class="button-group">
+                    <input type="submit" value="Guardar" />
+                    <button type="button" onclick="document.getElementById('formulario').reset();">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="tabla-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tarjeta</th>
+                        <th>Vencimiento</th>
+                        <th>Método</th>
+                        <th>Nombre</th>
+                        <th>CVC</th>
+                        <th>Talla</th>
+                        <th>Comentarios</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+
+    <script src="formulario.js"></script>
+</body>
+</html>
+
